@@ -1,0 +1,206 @@
+<!-- Save as morphology_test.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Morphology & Form Test — Headings and Bold Elements</title>
+  <meta name="description" content="A long HTML file with many word forms, headings (h1..h6), and bold elements to test preprocessing.">
+  <style>
+    body { font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 24px; }
+    section { margin-bottom: 28px; }
+  </style>
+</head>
+<body>
+
+  <h1>Primary Heading: Root forms and surface forms</h1>
+  <p>
+    This file contains many <b>words</b> in <b>their</b> various <strong>forms</strong> so that a preprocessing
+    step (tokenization, stemming, lemmatization) can be checked. Words appear in <b>singular</b> and <b>plural</b>,
+    in different <strong>tenses</strong>, in comparative and superlative forms, and as related nouns and adjectives.
+  </p>
+
+  <h2>Verbs: regular and irregular</h2>
+  <section>
+    <h3>Basic verbs and tenses</h3>
+    <p>
+      <b>run</b>, <b>runs</b>, <b>running</b>, <b>ran</b>.
+      <strong>eat</strong>, <strong>eats</strong>, <strong>eating</strong>, <strong>ate</strong>, <strong>eaten</strong>.
+      <b>go</b>, <b>goes</b>, <b>going</b>, <b>went</b>, <b>gone</b>.
+    </p>
+
+    <h4>Perfect and continuous</h4>
+    <p>
+      <b>have</b>, <b>has</b>, <b>had</b>, <b>having</b>.
+      <b>be</b>, <b>is</b>, <b>am</b>, <b>are</b>, <b>was</b>, <b>were</b>, <b>been</b>, <b>being</b>.
+      <strong>write</strong>, <strong>writes</strong>, <strong>writing</strong>, <strong>wrote</strong>, <strong>written</strong>.
+    </p>
+
+    <h5>Modal and auxiliary combinations</h5>
+    <p>
+      <b>can</b>, <b>could</b>, <b>will</b>, <b>would</b>, <b>shall</b>, <b>should</b>, <b>might</b>, <b>must</b>.
+      <strong>do</strong>, <strong>does</strong>, <strong>did</strong>, <strong>doing</strong>, <strong>done</strong>.
+    </p>
+  </section>
+
+  <h2>Nouns: regular, irregular, collective</h2>
+  <section>
+    <p>
+      <b>child</b>, <b>children</b>.
+      <b>mouse</b>, <b>mice</b>.
+      <b>person</b>, <b>people</b>.
+      <strong>datum</strong>, <strong>data</strong>; <strong>criterion</strong>, <strong>criteria</strong>.
+    </p>
+
+    <p>
+      <b>leaf</b>, <b>leaves</b>.
+      <b>analysis</b>, <b>analyses</b>.
+      <strong>index</strong>, <strong>indices</strong>, <strong>indexes</strong>.
+      <b>appendix</b>, <b>appendices</b>.
+    </p>
+
+    <h4>Derivations and related forms</h4>
+    <p>
+      <strong>organize</strong>, <strong>organizes</strong>, <strong>organized</strong>, <strong>organizing</strong>,
+      <strong>organization</strong>, <strong>organizational</strong>, <strong>organizer</strong>.
+    </p>
+  </section>
+
+  <h2>Adjectives & Adverbs: comparative & superlative</h2>
+  <section>
+    <p>
+      <b>happy</b>, <b>happier</b>, <b>happiest</b>;
+      <b>big</b>, <b>bigger</b>, <b>biggest</b>.
+      <strong>good</strong>, <strong>better</strong>, <strong>best</strong>.
+      <b>bad</b>, <b>worse</b>, <b>worst</b>.
+    </p>
+
+    <p>
+      <strong>quick</strong>, <strong>quicker</strong>, <strong>quickest</strong>;
+      <strong>slow</strong>, <strong>slower</strong>, <strong>slowest</strong>.
+    </p>
+  </section>
+
+  <h2>Derivational morphology: prefixes, suffixes, compounds</h2>
+  <section>
+    <p>
+      <b>connect</b>, <b>connects</b>, <b>connected</b>, <b>connecting</b>, <b>connection</b>, <b>connections</b>.
+      <strong>decide</strong>, <strong>decides</strong>, <strong>decided</strong>, <strong>deciding</strong>,
+      <strong>decision</strong>, <strong>decisions</strong>.
+    </p>
+
+    <p>
+      <b>re-use</b>, <b>reused</b>, <b>reusing</b>, <b>mis-use</b>, <b>misused</b>, <b>misusing</b>.
+      <b>pre-process</b>, <b>preprocessed</b>, <b>preprocessing</b>.
+    </p>
+
+    <p>
+      Compound nouns and adjectives: <strong>full-length</strong>, <strong>well-known</strong>, <strong>user-friendly</strong>,
+      <strong>long-term</strong>, <strong>short-term</strong>.
+    </p>
+  </section>
+
+  <h2>Pronouns, possessives, and contractions</h2>
+  <section>
+    <p>
+      <b>I</b>, <b>you</b>, <b>he</b>, <b>she</b>, <b>it</b>, <b>we</b>, <b>they</b>.
+      Possessive: <b>my</b>, <b>mine</b>, <b>your</b>, <b>yours</b>, <b>his</b>, <b>her</b>, <b>hers</b>, <b>its</b>, <b>our</b>, <b>their</b>.
+    </p>
+
+    <p>
+      Contractions: <b>don't</b>, <b>doesn't</b>, <b>didn't</b>, <b>can't</b>, <b>won't</b>, <b>I'm</b>, <b>they're</b>, <b>we've</b>.
+    </p>
+  </section>
+
+  <h2>Negations, questions, and modality</h2>
+  <section>
+    <p>
+      <strong>not</strong>, <strong>no</strong>, <strong>never</strong>, <strong>none</strong>, <strong>nobody</strong>.
+      <b>why</b>, <b>what</b>, <b>when</b>, <b>where</b>, <b>how</b>, <b>who</b>, <b>which</b>.
+    </p>
+
+    <p>
+      Mixed forms to test tokenization: <strong>"Don't-run"</strong>, <strong>"can't've"</strong>, <strong>"they're-going"</strong>.
+    </p>
+  </section>
+
+  <h2>Repeated clusters of forms (dense for testing)</h2>
+  <section>
+    <p>
+      run runs running ran run-run runner runners runningness runningly.
+      play plays played playing playful playfully playfulness.
+    </p>
+
+    <p>
+      sing sings sang sung singing singer singers song songs songful songlike.
+      think thinks thinking thought thoughtful thoughtless rethink rethinking rethought.
+    </p>
+  </section>
+
+  <h2>Numbers, ordinals, and dates as tokens</h2>
+  <section>
+    <p>
+      1, 2, 10, 100, 1000.
+      1st, 2nd, 3rd, 4th, 10th.
+      January, Jan., 2020, 2021-07-15, 15/07/2021.
+    </p>
+  </section>
+
+  <h2>Punctuation, brackets, and special forms</h2>
+  <section>
+    <p>
+      Parentheses and commas: (connect, connected), [array, arrays], {set, sets}.
+      Dashes — en-dash, — em-dash — and hyphens: state-of-the-art, up-to-date.
+    </p>
+
+    <p>
+      Quotation marks: "quoted", 'single-quoted', «guillemet».
+      Ellipses... and multiple punctuation??? !!
+    </p>
+  </section>
+
+  <h2>Words in many related morphological families (long paragraph)</h2>
+  <section>
+    <p>
+      <b>act</b>, <b>acts</b>, <b>acted</b>, <b>acting</b>, <b>action</b>, <b>actions</b>, <b>active</b>, <b>actively</b>,
+      <b>activity</b>, <b>activities</b>, <b>actor</b>, <b>actors</b>, <b>actress</b>, <b>actresses</b>.
+      <strong>create</strong>, <strong>creates</strong>, <strong>created</strong>, <strong>creating</strong>,
+      <strong>creative</strong>, <strong>creatively</strong>, <strong>creation</strong>, <strong>creations</strong>,
+      <strong>creator</strong>, <strong>creators</strong>.
+      <b>translate</b>, <b>translates</b>, <b>translated</b>, <b>translating</b>, <b>translation</b>, <b>translations</b>.
+    </p>
+  </section>
+
+  <h2>Mix of uppercase, lowercase, and TitleCase</h2>
+  <section>
+    <p>
+      apple Apple APPLE AppleTree apple-tree CamelCase camelCase CAMELCase.
+      URL, Url, url, HTTP, http, Https, https.
+    </p>
+  </section>
+
+  <h2>Misc: foreign loanwords and diacritics</h2>
+  <section>
+    <p>
+      café, résumé, naïve, façade, coöperate, jalapeño, niño, über, fiancée, déjà, vis-à-vis.
+    </p>
+  </section>
+
+  <h2>Final block: deliberate repetitions and near-duplicates</h2>
+  <section>
+    <p>
+      decide decides decided deciding decision decisions; <b>decide</b> <b>deciding</b> <b>decided</b>.
+      connect connects connected connecting connection connections; <strong>connect</strong> <strong>connection</strong>.
+    </p>
+
+    <p>
+      play, Play, plays, playing, played, player, players — repeated: play play play plays playing played player players.
+      run, Run, runs, running, ran, runner, runners — repeated: run run run runs running ran runner runners.
+    </p>
+
+    <p>
+      <strong>END OF FILE — morphology test content.</strong>
+    </p>
+  </section>
+
+</body>
+</html>
