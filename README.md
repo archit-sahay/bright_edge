@@ -18,6 +18,12 @@ python -m nltk.downloader punkt stopwords averaged_perceptron_tagger
 be-topics extract --url "https://www.amazon.com/..." --top-k 8 --timeout 8
 ```
 
+Example (Amazon toaster with rendering):
+
+```bash
+be-topics extract --url "@https://www.amazon.com/Cuisinart-CPT-122-Compact-2-Slice-Toaster/dp/B009GQ034C/ref=sr_1_1?s=kitchen&ie=UTF8&qid=1431620315&sr=1-1&keywords=toaster&th=1 " --top-k 10 --timeout 8 --render
+```
+
 Outputs JSON with `page_type` and `topics`.
 
 ## Development
