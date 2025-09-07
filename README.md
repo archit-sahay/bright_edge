@@ -10,6 +10,8 @@ source .venv/bin/activate
 pip install -U pip
 pip install -e .
 python -m nltk.downloader punkt stopwords averaged_perceptron_tagger
+# For JS rendering support (only if you plan to use --render)
+python -m playwright install chromium
 ```
 
 ## CLI
@@ -24,6 +26,26 @@ Example (Amazon toaster with rendering):
 be-topics extract --url "@https://www.amazon.com/Cuisinart-CPT-122-Compact-2-Slice-Toaster/dp/B009GQ034C/ref=sr_1_1?s=kitchen&ie=UTF8&qid=1431620315&sr=1-1&keywords=toaster&th=1 " --top-k 10 --timeout 8 --render
 ```
 
+Flags:
+
+- `--url` (required): Page to analyze.
+- `--top-k` (default: 8): Number of topics to return.
+- `--timeout` (seconds, default: 8): Network timeout per request.
+- `--render` (optional): Use a headless browser (Playwright/Chromium) for JS‑heavy pages. Requires `python -m playwright install chromium`. Slower; use only when needed.
+- `--no-robots` (optional): Ignore robots.txt (not recommended by default).
+- `--css-topics` (optional): Also consider semantic CSS class/id tokens on sparse pages.
+- `--verbose` (optional): Print additional debug logs to stdout.
+
+More examples:
+
+```bash
+# Wikipedia article (no render)
+be-topics extract --url "https://en.wikipedia.org/wiki/Elon_Musk" --top-k 10 --timeout 8
+
+# Localhost/static page
+be-topics extract --url "http://localhost:63342/bright_edge/untitled.html" --top-k 10 --timeout 8
+```
+
 Outputs JSON with `page_type` and `topics`.
 
 ## Development
@@ -32,7 +54,7 @@ Outputs JSON with `page_type` and `topics`.
 
 ## Notes
 - Honors robots.txt and basic preflight checks.
-- JS-heavy pages are best-effort; optional headless fetch could be added later.
+- JS-heavy pages are supported via the `--render` flag (Playwright/Chromium).
 
 ---
 
